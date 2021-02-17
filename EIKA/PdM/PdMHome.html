@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PdM</title>
+</head>
+
+<body>
+<h3>PdM homepage</h3>
+
+<h4>AI based PdM</h4>
+
+<li><a href="https://www.mathworks.com/help/predmaint/">Matlab PdM Home</a></li>
+<li><a href="https://www.youtube.com/watch?v=PngqgzJaSz8"> video </a></li>
+<li><a href="./datasets.html">datasets</a></li>
+<br>
+Types of questions:
+<ol>
+    <li>Anomaly detection - is the machine behaving weirdly</li>
+    <li>Fault classification / root cause isolation- is there a fault. if yes, which one?</li>
+    <li>Remaining useful life estimation </li>
+</ol> 
+
+Types of data involved - Images, sensors. which to use depends on device + type of question that you wanna answer.
+<br>
+<br>
+
+
+Challenges: (Major takeaway - need to work closely with engineers (domain/machine experts))
+<ol>
+    <li><a href="./data_acquisition.html">Data acquisition</a> - how do you get failure data when every company is trying to avoid exactly that.
+        <ul>
+            <li>Need domain expert engineers to check the right kind of the failure data. Their knowledge of what failure data might look like needs to be incorporated in the predictive model</li>
+            <li>Might need signal processing techniques, model-based techniques(?), modeling the system dynamics etc.</li>
+            <li>Companies often build models/simulations of their systems during the design stages which can be used by injecting failure modes and faults into them and generate synthetic (but cheap and safe, but also not really real o.O ) failure data.</li>
+        </ul>
+    </li>
+    <li><a href="./feature_extraction.html">Feature extraction and reduction</a> - any data you might get your hands onto, you'll have lots of it.. think GBs and TBs each day. Cost and time efficient methods of doing this. Reduction still must retain all the useful information</li>
+    <li><a href="data_science.html">Data science</a> - method, training, and your usual ML questions belong here </li>
+    <li>and lastly, integration into production. Do you go cloud, on premise, hybrid, IoT/edge devices</li>
+</ol>
+
+</body>
+
+</html>
