@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>OpenGL</title>
+</head>
+
+<body>
+<h3>opengl</h3>
+<li><a>OpenGL context</a>:
+    <ul>
+    <li>from <a href="https://www.gamedev.net/forums/topic/603708-what-exactly-is-an-opengl-context-how-does-it-work/">gamedev.net</a> - Your GPU draws stuff. Windows owns part of that, your game owns part of that, and your applications such as web browsers own stuff. Say you call glClear() to clear your current drawing frame. It does not clear windows desktop and other stuff. So each time you open a GL application, it needs its own stack of states. Say you call glColor3f(1,1,1) in one instance of your game and then open a 2nd copy of your game calling glColor3f(0,0,0) in the other. There are two contexts and two glColors being tracked separately.</li>
+    <li>from <a href="https://open.gl/context">open.gl</a> - it is essentially a state machine that stores all data related to the rendering of your application. When your application closes, the OpenGL context is destroyed and everything is cleaned up. </li>
+    </ul>
+</li>
+<li>glfwMakeContextCurrent(GLFWwindow* window) - tell GLFW to make the context of our window the main context on the current thread</li>
+<li>opengl used NDC (-1, 1). glViewPort(GLint x, GLint y, GLsizei width, GLsizei height) - x,y set location of the bottom left corner of the window and width, height for w,h of rendering window in pixels. OpenGL then uses this transform to go from its NDC to pixel in window</li>
+<li>glfwSetFramebufferSizeCallback(GLFWwindow* window, GLFWframebuffersizefun callback) - upon resize or first time window is displayed, callback gets called with the resulting window dimensions</li>
+<li>glClearColor(0.2f, 0.3f, 0.3f, 1.0f); glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT)</li>
+
+
+
+</body>
+
+</html>
